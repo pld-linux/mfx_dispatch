@@ -6,14 +6,14 @@ Summary:	Intel Media SDK dispatcher library
 Summary(pl.UTF-8):	Biblioteka dispatchera z Intel Media SDK
 Name:		mfx_dispatch
 # grep ^AC_INIT configure.ac
-Version:	1.7
-%define	snap	20141205
-%define	gitrev	e1594a0ca6b10a1f26f47009cb035b49be561b93
+Version:	1.16
+%define	snap	20151203
+%define	gitrev	9f4a84d73fb73d430f07a80cea3688c424439f6a
 Release:	0.%{snap}.1
 License:	BSD
 Group:		Libraries
-Source0:	https://github.com/lu-zero/mfx_dispatch/archive/%{gitrev}/%{name}.tar.gz
-# Source0-md5:	38e6c5df57f9291132351639cd2cb2f5
+Source0:	https://github.com/lu-zero/mfx_dispatch/archive/%{gitrev}/%{name}-%{snap}.tar.gz
+# Source0-md5:	c867acc2d399840c487b0532c464a12a
 URL:		https://github.com/lu-zero/mfx_dispatch
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
@@ -66,6 +66,7 @@ Statyczna biblioteka MFX.
 %{__autoconf}
 %{__automake}
 %configure \
+	--enable-shared \
 	%{!?with_static_libs:--disable-static}
 %{__make}
 

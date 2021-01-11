@@ -1,0 +1,11 @@
+--- mfx_dispatch-1.34/mfx/mfxdefs.h.orig	2020-09-24 12:06:21.000000000 +0200
++++ mfx_dispatch-1.34/mfx/mfxdefs.h	2021-01-11 07:55:07.966131899 +0100
+@@ -83,7 +83,7 @@
+     #define MFX_PACK_BEGIN_STRUCT_W_PTR()    MFX_PACK_BEGIN_X(4)
+     #define MFX_PACK_BEGIN_STRUCT_W_L_TYPE() MFX_PACK_BEGIN_X(8)
+ /* 32-bit ILP32 data model Linux */
+-#elif defined(__ILP32__)
++#elif defined(__ILP32__) || defined(__i386__)
+     #define MFX_PACK_BEGIN_STRUCT_W_PTR()    MFX_PACK_BEGIN_X(4)
+     #define MFX_PACK_BEGIN_STRUCT_W_L_TYPE() MFX_PACK_BEGIN_X(4)
+ #else

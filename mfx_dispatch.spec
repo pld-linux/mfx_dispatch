@@ -5,13 +5,13 @@
 Summary:	Intel Media SDK dispatcher library
 Summary(pl.UTF-8):	Biblioteka dispatchera z Intel Media SDK
 Name:		mfx_dispatch
-Version:	1.34
+Version:	1.35.1
 Release:	1
 License:	BSD
 Group:		Libraries
 #Source0Download: https://github.com/lu-zero/mfx_dispatch/releases
 Source0:	https://github.com/lu-zero/mfx_dispatch/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	6b2441bf6dd0c8c16af7cf4e8cefe2f4
+# Source0-md5:	37379e9133308ebb4eeb6d3160ebe283
 Patch0:		%{name}-arch.patch
 URL:		https://github.com/lu-zero/mfx_dispatch
 BuildRequires:	autoconf >= 2.53
